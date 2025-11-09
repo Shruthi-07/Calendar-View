@@ -80,7 +80,7 @@ export const WeekView: React.FC<WeekViewProps> = ({
     e.preventDefault();
   }, [weekDays]);
 
-  const handleTimeSlotMouseMove = useCallback((date: Date, hour: number, e: React.MouseEvent) => {
+  const handleTimeSlotMouseMove = useCallback((date: Date, hour: number, _e: React.MouseEvent) => {
     if (!dragState.isDragging || dragState.column === null) return;
     
     const columnIndex = weekDays.findIndex(d => isSameDay(d, date));
