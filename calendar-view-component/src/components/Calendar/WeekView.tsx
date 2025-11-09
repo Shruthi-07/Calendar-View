@@ -42,25 +42,6 @@ export const WeekView: React.FC<WeekViewProps> = ({
 
   const dayNames = useMemo(() => getDayNames(), []);
 
-  // Get events for a specific day and hour
-  const getEventsForSlot = useCallback((date: Date, hour: number) => {
-    return events.filter((event) => {
-      const eventStart = new Date(event.startDate);
-      const eventEnd = new Date(event.endDate);
-      
-      // Check if event is on this date
-      if (!isSameDay(eventStart, date) && !isSameDay(eventEnd, date)) {
-        return false;
-      }
-      
-      // Check if event overlaps with this hour
-      const slotStart = new Date(date.getFullYear(), date.getMonth(), date.getDate(), hour, 0);
-      const slotEnd = new Date(date.getFullYear(), date.getMonth(), date.getDate(), hour + 1, 0);
-      
-      return eventStart < slotEnd && eventEnd > slotStart;
-    });
-  }, [events]);
-
   // Calculate event position and height
   const calculateEventStyle = useCallback((event: CalendarEvent, date: Date) => {
     const eventStart = new Date(event.startDate);

@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "chromatic": "npx chromatic --project-token=chpt_c5bef87b2d56c4b"
   },
   "dependencies": {
     "react": "^18.2.0",

@@ -28,7 +28,6 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
     goToNextWeek,
     goToPreviousWeek,
     goToToday,
-    toggleView,
     setView,
   } = useCalendar(initialDate);
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { EventModalProps, EventFormData, FormErrors, CalendarEvent } from './CalendarView.types';
-import { Modal } from '@/components/primitives/Modal';
 import { Button } from '@/components/primitives/Button';
 import { generateEventId, EVENT_COLORS, EVENT_CATEGORIES } from '@/utils/event.utils';
 
